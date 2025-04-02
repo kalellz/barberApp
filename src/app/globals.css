@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-image: url("/background.png");
+  --font-family: Inter, sans-serif;
 }
 
 @theme inline {
@@ -21,6 +23,7 @@
 
 body {
   background: var(--background);
+  background-image: var(--background-image);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
 }
