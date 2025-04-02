@@ -15,11 +15,11 @@ export default function Home() {
           <button>Sair</button>
         </div>
       </header>
-      <main className="h-4/6 flex flex-col">
+      <main className="h-4/6 flex flex-col items-center justify-center">
         <header>
 
         </header>
-        <section className="flex justify-between">
+        <section className="flex justify-between w-full md:w-1/2 gap-4">
           <CardMoney text={"24, Março"} value={`R$ ${value},00`}/>
           <CardMoney text={"Esta Semana"} value={`R$ ${value},00`}/>
         </section>
@@ -27,9 +27,9 @@ export default function Home() {
           
         </section>
       </main>
-      <footer className="">
-        <button /> Clientes
-        <button /> Novo Agendamento
+      <footer className="h-1/6 flex justify-between items-center w-full">
+        <button className="p-2 px-4">Clientes</button>
+        <button className="p-2 px-4">Novo Agendamento</button>
       </footer>
     </div>
   );
