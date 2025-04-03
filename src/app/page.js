@@ -1,5 +1,5 @@
-import CardMoney from "./components/cardMoney";
-
+import CardMoney from "../components/cardMoney";
+import { CarouselSize } from "../components/Carousel";
 export default function Home() {
   const user = {
     name: "Ryan",
@@ -24,7 +24,7 @@ export default function Home() {
           <CardMoney text={"Esta Semana"} value={`R$ ${value},00`}/>
         </section>
         <section>
-          
+          <CarouselSize />
         </section>
       </main>
       <footer className="h-1/6 flex justify-between items-center w-full">
