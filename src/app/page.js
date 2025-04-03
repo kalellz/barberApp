@@ -1,9 +1,12 @@
 "use client"
+import Button from "@/components/button";
 import CardMoney from "../components/cardMoney";
 import { CarouselSize } from "../components/Carousel";
 import { Calendar } from "@/components/ui/calendar";
-import { useState, useEffect } from "react";
-
+import { useState, useEffect, use } from "react";
+import { PlusIcon } from "lucide-react";
+import { UserIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 function getCurrentMonth() {
   const months = {
     0: 'Janeiro',
@@ -62,6 +65,7 @@ export default function Home() {
       setWeekNumber(getWeekNumber(newDate.getDate()));
     }
   };
+  const router = useRouter();
   
   return (
     <div className="h-screen w-screen flex flex-col p-4">
@@ -90,8 +94,8 @@ export default function Home() {
         </section>
       </main>
       <footer className="h-1/6 flex justify-between items-center w-full">
-        <button className="p-2 px-4">Clientes</button>
-        <button className="p-2 px-4">Novo Agendamento</button>
+        <Button text="Clientes" image={UserIcon} onClick={() => router.push("/clientes")} />
+        <Button text="Novo Agendamento" image={PlusIcon} onClick={() => router.push("/agendamentos")}/>
       </footer>
     </div>
   );
